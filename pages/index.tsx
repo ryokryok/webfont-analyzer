@@ -13,7 +13,7 @@ import {
   formButton,
   formGroup,
   resultTextArea,
-} from "./index.css";
+} from "../styles/index.css";
 
 type ResultAreaProps = {
   contentUrl: string;
