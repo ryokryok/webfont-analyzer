@@ -34,7 +34,7 @@ export const fetchFontFamily = async (targetUrl: string) => {
   const analyze = await page.evaluate(() => {
     const fontFamily = getComputedStyle(document.body).fontFamily;
     const styleSheets = Array.from(document.querySelectorAll("link"))
-      .filter((link) => link.rel === "stylesheet")
+      .filter((link) => link.rel === "stylesheet" && link.href !== "")
       .map((link) => link.href);
 
     return { fontFamily, styleSheets };
